@@ -18,3 +18,19 @@ int Count(string[] array)
 }
 Console.WriteLine($"In this array {Count(arrayWords)} word(s) has/have 3 letters");
 Console.WriteLine($"Now let's put them in a seperate array.");
+int size = Count(arrayWords);
+string[] newWords = new string[size];
+void Merge(string[] oldArray, string[] newArray)
+{
+    int y = 0;
+    int x = 0;
+    for (int i = 0; i < oldArray.Length; i++)
+    {
+        x = oldArray[i].Length;
+        if (x <= 3)
+        {
+            newArray[y] = oldArray[i];
+            y++;
+        }
+    }
+}
