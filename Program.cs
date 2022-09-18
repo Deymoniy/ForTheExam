@@ -34,3 +34,16 @@ void Merge(string[] oldArray, string[] newArray)
         }
     }
 }
+
+void ShowArray(string[] array)
+{
+    Console.Write("So your new array is going to look something like this. newArray = {");
+    for (int i = 0; i < array.Length - 1; i++)
+    {
+        Console.Write($"{array[i]}, ");
+    }
+    Console.Write($"{array[array.Length - 1]}");
+    Console.Write("}.");
+}
+Merge(arrayWords, newWords);
+ShowArray(newWords);
